@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
+
 #janela do jogo com titulo e tamanho
 def iniciar_jogo():
     janela_jogo = tk.Toplevel()
@@ -53,14 +54,14 @@ def iniciar_jogo():
             return
        
         movimento = movimento_map[tecla]
-    #se nao colidir com nada, ta podendo mover
+    #se não colidir com nada, ta podendo mover
         if not colisao_labirinto(objeto=caixa, movimento=movimento):
             canvas.move(caixa, *movimento)
 
-#Ligar o evento de tecla à função de movimento
+#ligar o evento de tecla à função de movimento
     janela_jogo.bind("<Key>", mover_caixa)
 	
-#funcao de desligar o joguinho
+#função de desligar o joguinho
 def fechar_jogo():
     janela.quit()
 	
@@ -77,5 +78,5 @@ botao_iniciar.pack(pady=10)
 botao_fechar = ttk.Button(janela, text="Fechar Jogo", command=fechar_jogo)
 botao_fechar.pack(pady=10)
 
-#comeca comeca comeca
+#começa começa começa
 janela.mainloop() 
