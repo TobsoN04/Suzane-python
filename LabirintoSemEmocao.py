@@ -70,7 +70,7 @@ janela = tk.Tk()
 janela.title("Menu jogo")
 janela.geometry("400x300")
 
-#titulo, fonte e botoes na tela do menu
+#titulo, fonte e bõtoes na tela do menu
 titulo = ttk.Label(janela, text="Labirinto", font=("Arial", 20))
 titulo.pack(pady=20)
 botao_iniciar = ttk.Button(janela, text="Iniciar Jogo", command=iniciar_jogo)
